@@ -9,6 +9,11 @@
     --br:#45290f;
 }
 
+::selection{
+    background-color:var(--g);
+    color:var(--w);
+}
+
 *,*:before,*:after{
     padding:0;
     margin:0;
@@ -25,7 +30,17 @@ body{
 }
 
 img{
+    user-select: none;
     -webkit-user-drag: none;
+}
+
+button{
+    transition:transform 300ms, box-shadow 300ms;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0px 0px 5px var(--dg);
 }
 
 .mapouter{
@@ -54,7 +69,7 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
     left:0;
     height:100%;
     width:100%;
-    background-color:rgba(0,0,0,0.3);
+    background-color:rgba(0,0,0,0.2);
     z-index:9;
 }
 
@@ -279,9 +294,25 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
     height:50px;
     width:50px;
     border:2px solid var(--w);
-    background: rgb(56,116,110);
-background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, rgba(0,14,13,1) 100%);
     border-radius:50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.impression1 .person-logo{
+    background-image:url('../images/client1.png');
+}
+
+.impression2 .person-logo{
+    background-image:url('../images/client2.png');
+}
+
+.impression3 .person-logo{
+    background-image:url('../images/client3.png');
+}
+
+.impression4 .person-logo{
+    background-image:url('../images/client4.png');
 }
 
 .person-info{
@@ -379,6 +410,15 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
     gap:20px;
 }
 
+.pop-up-image{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+
 footer{
     display:flex;
     height:auto;
@@ -386,7 +426,6 @@ footer{
     flex-direction: column;
     background-color:var(--dg);
     padding:5px;
-    box-shadow:0px -20px 50px var(--g);
 }
 
 footer img{
@@ -465,25 +504,6 @@ footer > h4{
     font-size:1rem;
 }
 
-@media only screen and (min-width: 375px) {
-    .footer-info{
-        display:flex;
-        flex-direction:column;
-        align-items:end;
-    }
-    :is(.location-info, .contact-info){
-        order:1;
-    }
-
-    :is(.location, .contact){
-        order:2;
-    }
-
-    .footer-shop{
-        width:auto;
-    }
-}
-
 @media only screen and (min-width: 450px){
     #button-left{
         left:50px;
@@ -491,6 +511,16 @@ footer > h4{
 
     #button-right{
         right:50px;
+    }
+
+    .content{
+        align-items:center;
+        gap:20px;
+    }
+
+    .footer-info{
+        display:flex;
+        gap:10px;
     }
 }
 
@@ -531,13 +561,24 @@ footer > h4{
     #button-right{
         right:100px;
     }
+
+    .fifth-page h1{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #fp-fp{
+        top:50px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     #fp-fp{
         position:absolute;
         right:0;
-        bottom:0;
+        bottom:10%;
         top:unset;
     }
 
@@ -663,7 +704,12 @@ footer > h4{
 
     #fp-fp{
         right:0px;
-        bottom:150px;
+        bottom:10%;
+    }
+
+    .fifth-page h1{
+        font-size:2.5rem;
+        margin-bottom:20px;
     }
 }
 
@@ -696,6 +742,7 @@ footer > h4{
 @media only screen and (min-width: 1440px){
     #fp-fp{
         right:100px;
+        bottom:10%;
     }
 
     .second-page h1{

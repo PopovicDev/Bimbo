@@ -3,7 +3,7 @@ let all_pics = document.getElementById('all-pics');
 let arrowLeft = document.getElementById('button-left');
 let arrowRight = document.getElementById('button-right');
 let fifth_page = document.getElementsByClassName('fifth-page')[0];
-console.log(fifth_page);
+
 let i = 0;
 let pictures = [
     "./images/random1.webp",
