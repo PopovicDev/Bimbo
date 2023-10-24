@@ -1,0 +1,27 @@
+LOGO[Bimbo]
+NAVIGATION[SHOP, ABOUT, CONTACT, CART]
+HEADLINE[Unlocking Wood's Potential: Your Skilled Carpenter]
+CALL TO ACTION[
+    - Montage.
+    - Production.
+    - Processing.
+    - Repair.
+]
+SOCIAL PROOF[
+
+]
+PHOTOS[
+
+]
+TEXT CONTENT[
+
+]
+FOOTER[
+
+]
+BENEFITS[
+
+]
+CONTENT OFFER[
+    
+]
