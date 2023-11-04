@@ -1,0 +1,574 @@
+button{
+    transition:transform 300ms, box-shadow 300ms;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0px 0px 5px var(--dg);
+}
+
+:is(#services div h3, .second-page h1, .second-page p, .third-page h1, .third-page p, .fourth-page h1, .impressions p, .person-info h3, .person-info h4, .button-shop, .fifth-page h1){
+    font-family:var(--font);
+}
+
+.first-page{
+    display:flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    width:100%;
+    background: rgb(56,116,110);
+background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, rgba(0,14,13,1) 100%);
+    overflow:hidden;
+    padding:10px 20px;
+    z-index:20;
+}
+
+.first-page::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,0.2);
+    z-index:9;
+}
+
+#fp-fp{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+#services{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:21;
+}
+
+#services div{
+    display:none;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    width:80px;
+    background-color:var(--lg);
+    border:3px solid var(--dg);
+    border-radius:50%;
+}
+
+#service1 i{
+    padding-left:3px;
+    padding-bottom:3px;
+}
+
+#services div h3{
+    font-size:1.25rem;
+    color:var(--lg);
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 215%);
+}
+
+#services div i{
+    color:var(--bg);
+    font-size:1.75rem;
+}
+
+.second-page{
+    display:flex;
+    position: relative;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:400px;
+    width:100%;
+    background-color:var(--dg);
+    padding:0px 20px;
+    gap:20px;
+    box-shadow:0px 20px 50px var(--g);
+}
+
+#sp-fp{
+    position:absolute;
+    left:0px;
+    top:0px;
+    max-width:100%;
+    height:auto;
+    display:none;
+}
+.second-page > div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    justify-content:center;
+    z-index:1;
+}
+
+.second-page h1{
+    text-align:center;
+    max-width:15ch;
+    color:var(--w);
+    margin-top:130px;
+}
+
+.second-page p{
+    text-align:center;
+    font-weight:700;
+    color:var(--lg);
+}
+
+.second-page p span{
+    color:var(--bg);
+}
+
+.second-page img{
+    max-width:100%;
+    max-height:auto;
+}
+
+#sp-sp{
+    z-index:1;
+}
+
+.third-page{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:100%;
+    text-align:center;
+    padding:10px 20px;
+    padding-top:30px;
+}
+
+.third-page h1{
+    color:var(--dg);
+    margin-bottom:10px;
+    margin-top:40px;
+}
+
+.third-page p{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:var(--dg);
+}
+
+.third-page img{
+    max-width:100%;
+    max-height:auto;
+    margin:10px 0;
+    border-radius:5px;
+}
+
+.fourth-page{
+    display:flex;
+    height:100%;
+    width:100%;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    padding-left:200px;
+    background-color:var(--dg);
+    position:relative;
+    overflow:hidden;
+    padding:50px 20px 50px 20px;
+    box-shadow:0px 20px 50px var(--g);
+}
+
+.fourth-page::before{
+    content:'';
+    display:none;
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:rgba(0, 14, 13, 0.4);
+    z-index:5;
+}
+
+#fourthp-fp{
+    position:absolute;
+    right:0;
+    display:none;
+}
+
+.fp-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.fourth-page h1{
+    text-align:center;
+    color:var(--w);
+    margin-bottom:10px;
+    z-index:10;
+    order:1;
+    padding-bottom:20px;
+}
+
+.impressions{
+    display:grid;
+    gap:10px;
+    z-index:10;
+    order:2;
+}
+
+.impressions > div{
+    display:flex;
+    height:auto;
+    width:100%;
+    flex-direction:column;
+    background-color:var(--lg);
+    padding:10px;
+    border-radius:10px;
+}
+
+.impressions p{
+    color:var(--w);
+}
+
+.person{
+    display:flex;
+    gap:10px;
+}
+
+.person-logo{
+    height:50px;
+    width:50px;
+    border:2px solid var(--w);
+    border-radius:50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.impression1 .person-logo{
+    background-image:url('../images/client1.webp');
+}
+
+.impression2 .person-logo{
+    background-image:url('../images/client2.webp');
+}
+
+.impression3 .person-logo{
+    background-image:url('../images/client3.webp');
+}
+
+.impression4 .person-logo{
+    background-image:url('../images/client4.webp');
+}
+
+.person-info{
+    display:flex;
+    flex-direction: column;
+}
+
+.person-info h3{
+    color:var(--w);
+}
+
+.person-info h4{
+    color:var(--g);
+}
+
+.fifth-page{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:100%;
+    padding:50px 0;
+}
+
+.button-shop{
+    width:200px;
+    height:50px;
+    margin-bottom:20px;
+    color:var(--w);
+    background-color:var(--lg);
+    border:3px solid var(--g);
+    font-size:1.25rem;
+    cursor:pointer;
+}
+
+.fifth-page h1{
+    text-align:center;
+    color:var(--dg);
+    padding:10px 20px;
+}
+
+#fifth-page-pic{
+    border-radius:5px;
+    box-shadow:0px 5px 20px black;
+    z-index:100;
+}
+
+#button-left{
+    display:block;
+    position:absolute;
+    top:calc(50% + 50px);
+    left:0px;
+    height:50px;
+    width:50px;
+    background-color:var(--lg);
+    border:3px solid var(--g);
+    border-radius:50%;
+    z-index:120;
+    cursor:pointer;
+}
+
+#button-left i{
+    color:var(--bg);
+    font-size:1.25rem;
+}
+
+#button-right{
+    display:block;
+    position:absolute;
+    top:calc(50% + 50px);
+    right:0px;
+    height:50px;
+    width:50px;
+    background-color:var(--lg);
+    border:3px solid var(--g);
+    border-radius:50%;
+    z-index:101;
+    cursor:pointer;
+}
+
+#button-right i{
+    color:var(--bg);
+    font-size:1.25rem;
+}
+
+#all-pics{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+}
+
+@media only screen and (min-width: 450px){
+    #button-left{
+        left:50px;
+    }
+
+    #button-right{
+        right:50px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    #button-left{
+        left:100px;
+    }
+
+    #button-right{
+        right:100px;
+    }
+
+    .fifth-page h1{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #fp-fp{
+        top:50px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #fp-fp{
+        position:absolute;
+        right:0;
+        bottom:10%;
+        top:unset;
+    }
+
+    .headline h1{
+        font-size:2rem;
+    }
+
+    .headline h3{
+        font-size:1.75rem;
+    }
+
+    #services{
+        gap:90px;
+    }
+
+    #services div{
+        display:none;
+        position:relative;
+        justify-content:center;
+        align-items:center;
+        height:100px;
+        width:100px;
+        background-color:var(--lg);
+        border:3px solid var(--dg);
+        border-radius:50%;
+    }
+
+    #services div h3{
+        font-size:1.5rem;
+        margin-top:30px;
+    }
+
+    .second-page{
+        height:400px;
+        flex-direction:row;
+        padding-top:150px;
+    }
+    .second-page div{
+        order:2;
+        gap:50px;
+    }
+
+    .second-page h1{
+        font-size:1.8rem;
+        margin:0;
+    }
+
+    .second-page img{
+        order:1;
+        margin-top:80px;
+    }
+
+    .second-page p{
+        text-align:unset;
+        max-width:30ch;
+    }
+
+    .third-page{
+        text-align:unset;
+    }
+
+    .third-page h1{
+        font-size:1.8rem;
+    }
+
+    .third-page p{
+        flex-direction:row;
+        gap:10px;
+        max-width:60ch;
+    }
+
+    .third-page img{
+        margin:0;
+    }
+    
+    .impressions{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .impressions div{
+        max-width:500px;
+    }
+
+    #button-left{
+        left:25%;
+    }
+
+    #button-right{
+        right:25%;
+    }
+}
+
+@media only screen and (min-width:1023px){
+    .first-page{
+        justify-content:start;
+        padding-left:100px;
+    }
+
+    .first-page h1{
+        font-size:3rem;
+        text-align:left;
+        max-width:20ch;
+    }
+
+    .first-page h3{
+        font-size:2.5rem;
+        text-align:left;
+    }
+
+    #fp-fp{
+        right:0px;
+        bottom:10%;
+    }
+
+    .fifth-page h1{
+        font-size:2.5rem;
+        margin-bottom:20px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #sp-fp{
+        display:block;
+        top:-60px;
+        left:-150px;
+    }
+
+    .fourth-page{
+        flex-direction:row;
+    }
+
+    .impressions{
+        order:1;
+    }
+
+    #fourthp-fp{
+        display:block;
+        border-top-left-radius:250px;
+        border-bottom-left-radius:250px;
+    }
+
+    .fourth-page::before{
+        display:block;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    #fp-fp{
+        right:100px;
+        bottom:10%;
+    }
+
+    .second-page h1{
+        font-size:3rem;
+    }
+
+    .second-page p{
+        max-width:60ch;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    #sp-fp{
+        display:block;
+        top:-60px;
+        left:-100px;
+    }
+
+    .impressions{
+        padding-left:50px;
+    }
+}

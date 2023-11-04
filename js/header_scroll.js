@@ -5,6 +5,17 @@ let cart_icon = header.getElementsByClassName('cart-checkbtn')[0];
 let header_shop = document.getElementById('header-shop');
 let header_about = document.getElementById('header-about');
 let header_contact = document.getElementById('header-contact');
+let cart_number = document.getElementById('cart-item-num');
+let header_menu = document.getElementsByClassName('menu')[0];
+let page = window.location.pathname.split("/").pop();
+window.onload = function(){
+        if(page == "shop.html" || page == "cutting_boards.html"){
+                cart_number.style.color = 'var(--br)'
+        }
+        if(window.innerWidth < 768){
+                header_menu.style.backgroundColor = 'var(--bg)';
+        }
+}
 
 window.onscroll = function(){
 	if(window.pageYOffset > 50){
@@ -23,6 +34,12 @@ function GreenStyle(){
         header_shop.style.color = 'var(--g)';
         header_about.style.color = 'var(--g)';
         header_contact.style.color = 'var(--g)';
+        if(page == "shop.html" || page == "cutting_boards.html"){
+                cart_number.style.color = 'var(--bg)';
+        }
+        if(window.innerWidth < 768){
+                header_menu.style.backgroundColor = 'var(--w)';
+        }
 }
 
 function WhiteStyle(){
@@ -33,4 +50,10 @@ function WhiteStyle(){
         header_shop.style.color = 'var(--w)';
         header_about.style.color = 'var(--w)';
         header_contact.style.color = 'var(--w)';
+        if(page == "shop.html" || page == "cutting_boards.html"){
+                cart_number.style.color = 'var(--br)';
+        }
+        if(window.innerWidth < 768){
+                header_menu.style.backgroundColor = 'var(--bg)';
+        }
 }

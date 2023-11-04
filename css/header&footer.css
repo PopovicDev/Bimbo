@@ -1,0 +1,321 @@
+header{
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+   height:70px;
+   width:100%;
+   position:fixed;
+   top:0;
+   padding:0px 60px;
+   z-index:9999;
+   transition:background-color 300ms;
+   box-shadow:0px -10px 50px black;
+}
+
+.mapouter{
+   display:none;
+}
+
+:is(.menu a, #cart-item-num, .headline h1, .headline h3, .footer-shop, footer > h4, .location-info h4, .contact-info h4){
+   font-family:var(--font);
+}
+
+.header-logo{
+   font-family:'Segoe Script', sans-serif;
+   text-decoration:none;
+   color:var(--w);
+   order:2;
+   cursor:pointer;
+}
+
+.menu{
+   list-style:none;
+}
+
+.menu li{
+   display:inline-block;
+}
+
+.menu a{
+   text-decoration:none;
+   color:var(--w);
+   font-size:1.3rem;
+}
+
+#burger-check{
+   display:none;
+}
+
+.cart-area{
+   display:flex;
+   gap:5px;
+   align-items:center;
+   order:3;
+}
+
+#cart-check{
+   display:none;
+}
+
+.burger-checkbtn{
+   display:none;
+   color:var(--w);
+   order:1;
+   cursor:pointer;
+}
+
+.cart-checkbtn{
+   color:var(--w);
+   cursor:pointer;
+}
+
+#cart-item-num{
+   font-size:1.3rem;
+   color:var(--bg);
+}
+
+.headline{
+   display:flex;
+   flex-direction:column;
+   gap:10px;
+   z-index:10;
+}
+
+.headline h1{
+   text-align:center;
+   font-size:1.5rem;
+   color:var(--w);
+}
+
+.headline h3{
+   text-align:center;
+   color:var(--w);
+}
+
+.line{
+   width:100%;
+   height:4px;
+   border:none;
+   background-color:var(--bg);
+}
+
+footer{
+   display:flex;
+   height:auto;
+   width:100%;
+   flex-direction: column;
+   background-color:var(--dg);
+   padding:5px;
+}
+
+footer img{
+   max-width:40%;
+   height:40%;
+}
+
+.footer-content{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   width:100%;
+   gap:5px;
+}
+
+.footer-shop{
+   width:150px;
+   height:50px;
+   margin-bottom:20px;
+   color:var(--w);
+   background-color:var(--lg);
+   border:3px solid var(--g);
+   font-size:1.25rem;
+   cursor:pointer;
+}
+
+.content{
+   display:flex;
+   width:100%;
+   flex-direction:column;
+   gap:5px;
+}
+
+:is(.footer-location, .footer-contact){
+   display:flex;
+   align-items:center;
+   gap:5px;
+}
+
+footer > h4{
+   text-align:center;
+   font-size:0.7rem;
+   color:var(--w);
+}
+
+:is(.location, .contact){
+   display:flex;
+   align-items:center;
+   height:40px;
+   width:40px;
+   background-color:var(--lg);
+   border:2px var(--g);
+   border-radius:50%;
+   position:relative;
+}
+
+:is(.location-info, .contact-info){
+   display:flex;
+   width:auto;
+   flex-direction:column;
+}
+
+:is(.location-info h4, .contact-info h4){
+   font-size:0.7rem;
+   color:var(--lg);
+}
+
+:is(.location i, .contact i){
+   position:absolute;
+   left:50%;
+   transform:translate(-50%, 0%);
+   color:var(--bg);
+   font-size:1rem;
+}
+
+@media only screen and (min-width: 450px){
+   .content{
+      align-items:center;
+      gap:20px;
+  }
+
+  .footer-info{
+      display:flex;
+      gap:10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+   header{
+      padding:0 20px;
+   }
+
+   .header-logo{
+       font-size:1.3rem;
+   }
+
+   .burger-checkbtn{
+       font-size:1.3rem;
+   }
+
+   .cart-checkbtn{
+       font-size:1.3rem;
+   }
+}
+
+@media only screen and (min-width: 600px) {
+   .content{
+      justify-content:center;
+      align-items:center;
+  }
+
+  .footer-info{
+      display:flex;
+      width:100%;
+      gap:20px;
+      flex-direction:row;
+      align-items:unset;
+      justify-content:center;
+  }
+  :is(.location-info, .contact-info){
+      order:2;
+  }
+
+  :is(.location, .contact){
+      order:1;
+  }
+
+  .footer-shop{
+      width:200px;
+  }
+
+   .mapouter{
+      display:block;
+   }
+
+   .header-logo{
+      font-size:1.75rem;
+  }
+
+  .burger-checkbtn{
+      font-size:1.75rem;
+  }
+
+  .cart-checkbtn{
+      font-size:1.75rem;
+  }
+}
+
+@media only screen and (max-width:768px){
+   .first-page img{
+      left:0;
+   }
+}
+
+@media only screen and (min-width:768px){
+   .footer-content{
+      justify-content:space-around;
+  }
+
+  .footer-info{
+      display:flex;
+      justify-content:space-around;
+  }
+}
+
+@media only screen and (max-width:1023px){
+   .menu{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      justify-content:center;
+      align-items:center;
+      height:calc(100% - 70px);
+      width:100%;
+      position:fixed;
+      top:70px;
+      left:-100%;
+      background-color:var(--g);
+      transition:left 300ms;
+   }
+
+   #burger-check:checked ~ .menu{
+      left:0%;
+   }
+
+   .burger-checkbtn{
+      display:block;
+   }
+}
+
+@media only screen and (min-width:1023px){
+   .header-logo{
+      order:1;
+   }
+
+   nav{
+      order:2;
+   }
+
+   nav li{
+      padding:0 20px;
+   }
+
+   .cart-area{
+      order:3;
+   }
+}
+
+@media only screen and (min-width:1440px){
+   :is(.location-info h4, .contact-info h4){
+      font-size:0.9rem;
+  }
+}

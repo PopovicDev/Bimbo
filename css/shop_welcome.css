@@ -1,0 +1,82 @@
+main{
+    display:flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:100%;
+    background-color:var(--bg);
+}
+
+.path{
+    position:absolute;
+    top:calc(70px + 1%);
+    left:2%;
+    font-family:var(--font1);
+}
+
+.path a{
+    font-family:var(--font1);
+    color:var(--br);
+}
+
+.path a:hover{
+    color:var(--w);
+    text-decoration:underline;
+}
+
+.cutting-boards{
+    position:relative;
+    text-align:center;
+}
+
+.cutting-boards a{
+    font-family:var(--font1);
+    font-size:2rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-shadow:0px 0px 10px black;
+    transition:font-size 500ms;
+    width:100%;
+}
+
+.cutting-boards img{
+    max-width:90%;
+    max-height:auto;
+}
+
+@media only screen and (max-width:375px){
+    .cutting-boards a{
+        top:40%;
+        font-size:1.5rem;
+    }
+
+    .cutting-boards a:hover{
+        font-size:1.7rem;
+    }
+}
+
+@media only screen and (min-width:375px){
+    .cutting-boards a{
+        top:45%;
+        font-size:1.95rem;
+    }
+
+    .cutting-boards a:hover{
+        font-size:2.35rem;
+    }
+}
+
+@media only screen and (min-width:600px){
+    .cutting-boards a{
+        top:45%;
+        font-size:2.5rem;
+        max-width:20ch;
+    }
+
+    .cutting-boards a:hover{
+        font-size:3rem;
+    }
+}
