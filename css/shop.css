@@ -1,20 +1,3 @@
-.path{
-    position:absolute;
-    top:calc(70px + 1%);
-    left:2%;
-    font-family:var(--font1);
-}
-
-.path a{
-    font-family:var(--font1);
-    color:var(--br);
-}
-
-.path a:hover{
-    color:var(--w);
-    text-decoration:underline;
-}
-
 .articles{
     display:grid;
     place-content:center;

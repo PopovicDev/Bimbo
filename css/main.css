@@ -40,3 +40,21 @@ a{
     text-decoration:none;
     color:var(--w);
 }
+
+.path{
+    position:absolute;
+    top:calc(70px + 1%);
+    left:2%;
+    font-family:var(--font1);
+    z-index:30;
+}
+
+.path a{
+    font-family:var(--font1);
+    color:var(--br);
+}
+
+.path a:hover{
+    color:var(--w);
+    text-decoration:underline;
+}

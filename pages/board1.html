@@ -11,7 +11,7 @@
 	<link rel="apple-touch-icon" href="">
     <link rel="stylesheet" href="../css/header&footer.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/article_layout.css">
 </head>
 <body>
     <header id="header">
@@ -37,64 +37,57 @@
     </header>
     <main>
         <p class="path">
-            <a href="../index.html">HOME</a> > <a href="../pages/shop.html">SHOP</a> > <a href="../pages/cutting_boards.html">WOODEN CUTTING BOARDS</a>
+            <a href="../index.html">HOME</a> > <a href="../pages/shop.html">SHOP</a> > <a href="../pages/cutting_boards.html">WOODEN CUTTING BOARDS</a> > <a href="../pages/board1.html">Cutting Board 1</a>
         </p>
-        <div class="articles">
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #1</h1>
-                <h3>10.49E</h3>
-                <button><a href="../pages/board1.html">SEE MORE</a></button>
+        <section class="the-article">
+            <div>
+                <div class="article-pictures">
+                    <div id="article-mainpic">
+                        <img src="../images/board.png" alt="" id="pic1">
+                    </div>
+                    <div class="article-sidepic">
+                        <img src="../images/board.png" alt="" id="pic2">
+                        <img src="../images/board.png" alt="" id="pic3">
+                        <img src="../images/board.png" alt="" id="pic4">
+                    </div>
+                    <button id="button-left"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="button-right"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="article-content">
+                    <div class="article-about">
+                        <h1>CUTTING BOARD #1</h1>
+                        <h2>10.49E</h1>
+                        <div class="article-quantity">
+                            <h1>QUANTITY</h1>
+                            <div id="number-left"></div>
+                            <input type="number" name="number" id="number-quantity" min="0">
+                            <div id="number-right"></div>
+                        </div>
+                        <button><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                    </div>
+                    <div class="article-badges">
+                        <div class="badge1">
+                            <div class="badge-pic">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h2>SECURE PAYMENTS</h2>
+                        </div>
+                        <div class="badge2">
+                            <div class="badge-pic">
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                            <h2>FREE RETURNS</h2>
+                        </div>
+                        <div class="badge3">
+                            <div class="badge-pic">
+                                <i class="fa-solid fa-helmet-safety"></i>
+                            </div>
+                            <h2>SAFETY CERTIFIED</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #2</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #3</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #4</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #5</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #6</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #7</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #8</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-            <div class="article">
-                <img src="../images/board.png" alt="" width="400" height="155">
-                <h1>Cutting Board #9</h1>
-                <h3>10.49E</h3>
-                <button>SEE MORE</button>
-            </div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="footer-content">
@@ -127,6 +120,7 @@
         <h4>© All Rights Reserved to Bimbo</h4>
     </footer>
     <script src="../js/header_scroll.js"></script>
+    <script src="../js/shop.js"></script>
     <script src="https://kit.fontawesome.com/ea3edf7906.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,251 @@
+main{
+    background: var(--bg);
+    padding-top:150px;
+}
+
+.the-article{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    flex-basis:100%;
+    padding-bottom:50px;
+}
+
+.article-pictures{
+    position:relative;
+    flex-basis:50%;
+}
+
+.the-article > div{
+    display:flex;
+    gap:30px;
+}
+
+.article-pictures img{
+    max-width:100%;
+    height:auto;
+}
+
+#article-mainpic{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 10px;
+    margin-bottom:40px;
+    background-color:rgba(69, 41, 15, 0.6);
+    border:4px solid var(--br);
+}
+
+.article-sidepic{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.article-sidepic img{
+    display:flex;
+    width:138px;
+    padding:30px 10px;
+    background-color:rgba(69, 41, 15, 0.6);
+    border:4px solid var(--br);
+}
+
+.article-content{
+    display:flex;
+    flex-basis:50%;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.article-about{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-family:var(--font1);
+}
+
+.article-about > h1{
+    color:var(--w);
+}
+
+.article-about h2{
+    color:var(--dg);
+}
+
+.article-quantity{
+    display:flex;
+    align-items: center;
+}
+
+.article-quantity h1{
+    color:var(--br);
+    padding-right:15px;
+}
+  
+#number-left::before,
+#number-right::after {
+    content: '';
+    background-color: var(--lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--g);
+    width: 20px;
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+  
+#number-left::before {
+    content: "-";
+}
+  
+#number-right::after {
+    content: "+";
+}
+  
+#number-quantity {
+    font-family:var(--font);
+    padding: 0.24rem;
+    border: 0;
+    width: 50px;
+    -moz-appearance: textfield;
+    border-top: 1px solid var(--g);
+    border-bottom: 1px solid var(--g);
+}
+
+#number-quantity::-webkit-outer-spin-button,
+#number-quantity::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    appearance: none; 
+}
+
+#number-quantity:focus{
+    outline:none;
+}
+  
+#number-left:hover::before,
+#number-right:hover::after {
+    background-color: var(--dg);
+}
+
+.article-about button{
+    font-family:var(--font1);
+    height:50px;
+    margin-bottom:20px;
+    color:var(--w);
+    background-color:var(--lg);
+    border:3px solid var(--g);
+    font-size:1.25rem;
+    cursor:pointer;
+}
+
+.article-badges{
+    display:grid;
+    grid-template-columns: repeat(2, 200px);
+    gap:10px 30px;
+}
+
+.article-badges h2{
+    font-family:var(--font1);
+    color:var(--w);
+    font-size:1.25rem;
+}
+
+.article-badges div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.badge-pic{
+    border-radius:50%;
+    border:3px solid var(--dg);
+    padding:15px;
+    background: var(--g);
+}
+
+.badge-pic i{
+    font-size:1.25rem;
+    color:var(--w);
+}
+
+:is(#button-left, #button-right){
+    display:none;
+    height:40px;
+    width:40px;
+    position:absolute;
+    top:50%;
+    transform:translate(0, -100%);
+    border-radius:50%;
+    border:3px solid var(--br);
+    background-color:var(--bg);
+    color:var(--w);
+    font-size:1.25rem;
+}
+
+#button-left{
+    left:-10px;
+}
+
+#button-right{
+    right:-10px;
+}
+
+@media only screen and (min-width:450px){
+    :is(#button-left, #button-right){
+        height:50px;
+        width:50px;
+    }
+
+    #button-left{
+        left:-20px;
+    }
+    
+    #button-right{
+        right:-20px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .the-article > div{
+        flex-direction:column;
+        margin:0 20px;
+        gap:0px;
+    }
+
+    #article-mainpic{
+        display:none;
+        padding:40px;
+    }
+
+    :is(#pic1, #pic3, #pic4){
+        display:none;
+    }
+
+    :is(#button-left, #button-right){
+        display:block;
+    }
+
+    .article-sidepic img{
+        padding:40px;
+        flex-direction:column;
+        margin-bottom:40px;
+        gap:0px;
+    }
+
+    .article-sidepic img{
+        width:auto;
+        padding:40px;
+    }
+
+    .article-content{
+
+    }
+
+    .article-badges{
+        grid-template-columns: repeat(1, 300px);
+    }
+}

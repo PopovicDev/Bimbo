@@ -42,6 +42,10 @@ header{
    font-size:1.3rem;
 }
 
+.menu a:hover{
+   font-weight:700;
+}
+
 #burger-check{
    display:none;
 }
