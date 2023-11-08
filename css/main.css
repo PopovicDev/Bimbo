@@ -9,6 +9,9 @@
     --br:#45290f;
     --font:'Montserrat', sans-serif;
     --font1:'Archivo Black', sans-serif;
+    --vision1:none;
+    --vision2:none;
+    --vision3:none;
 }
 
 ::selection{

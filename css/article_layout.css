@@ -1,13 +1,13 @@
 main{
     background: var(--bg);
-    padding-top:150px;
+    padding-top:20px;
 }
 
 .the-article{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100%;
+    height:100vh;
     flex-basis:100%;
     padding-bottom:50px;
 }
@@ -162,9 +162,9 @@ main{
 
 .badge-pic{
     border-radius:50%;
-    border:3px solid var(--dg);
+    border:3px solid var(--br);
     padding:15px;
-    background: var(--g);
+    background: var(--br);
 }
 
 .badge-pic i{
@@ -194,6 +194,249 @@ main{
     right:-10px;
 }
 
+.article-info{
+    display: flex;
+    flex-direction: column;
+    padding-bottom:100px;
+}
+
+.article-info > div{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.article-info h1{
+    position:relative;
+    font-family:var(--font1);
+    font-size:1.25rem;
+    color:var(--br);
+    padding-bottom:10px;
+    cursor:pointer;
+}
+
+#details::after{
+    content:'';
+    display:var(--vision1);
+    position:absolute;
+    height:5px;
+    background-color:var(--br);
+    width:100%;
+    bottom:0;
+    left:0;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    box-shadow:
+    0px -2px 5px var(--br),
+    -4px 2px 5px var(--br),
+    4px 2px 5px var(--br);
+}
+
+#shipping::after{
+    content:'';
+    display:var(--vision2);
+    position:absolute;
+    height:5px;
+    background-color:var(--br);
+    width:100%;
+    bottom:0;
+    left:0;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    box-shadow:
+    0px -2px 5px var(--br),
+    -4px 2px 5px var(--br),
+    4px 2px 5px var(--br);
+}
+
+#returns::after{
+    content:'';
+    display:var(--vision3);
+    position:absolute;
+    height:5px;
+    background-color:var(--br);
+    width:100%;
+    bottom:0;
+    left:0;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    box-shadow:
+    0px -2px 5px var(--br),
+    -4px 2px 5px var(--br),
+    4px 2px 5px var(--br);
+}
+
+.article-info-content{
+    font-family:var(--font);
+    color:var(--w);
+    margin:auto;
+    padding:10px 20px 0px 20px;
+    max-width:65ch;
+}
+
+:is(#details-p, #shipping-p, #returns-p){
+    display:none;
+}
+
+.line{
+    margin-left:auto;
+    margin-right:auto;
+    height:5px;
+    width:100%;
+    background-color:var(--br);
+    border-radius:10px;
+}
+
+.article-reviews{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    gap:40px;
+    padding-bottom:100px;
+}
+
+.article-reviews h1{
+    font-family: var(--font1);
+    text-align:center;
+    font-size:1.75rem;
+    color:var(--br);
+    padding-bottom:30px;
+}
+
+.review{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    padding:10px;
+    border:3px solid var(--br);
+    border-radius:10px;
+    max-width:600px;
+}
+
+.review p{
+    font-family:var(--font);
+    color:var(--w);
+}
+
+.customer-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.customer-pic{
+    height:40px;
+    width:40px;
+    border:3px solid var(--br);
+    border-radius:50%;
+}
+
+.customer-cred{
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+}
+
+.customer-cred h3{
+    font-family:var(--font1);
+    font-size:1rem;
+    color:var(--br);
+}
+
+.stars i{
+    color:var(--br);
+}
+
+.faq{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:100%;
+    padding-bottom:100px;
+}
+
+.faq h1{
+    margin:auto;
+    font-family:var(--font1);
+    color:var(--br);
+    font-size:1.75rem;
+    padding-bottom:30px;
+}
+
+.faq-q{
+    width:100%;
+    max-width:600px;
+    border-bottom:3px solid var(--br);
+    cursor:pointer;
+}
+
+#faq-content{
+    display:none;
+    padding:5px;
+    font-family:var(--font);
+    font-size:0.95rem;
+    color:var(--w);
+}
+
+.faq-q > div{
+    display:flex;
+    padding:15px 0;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.faq-q > div h2{
+    font-family:var(--font1);
+    font-size:1.15rem;
+    color:var(--br);
+}
+
+.faq-q > div i{
+    font-family:var(--font1);
+    font-size:1.5rem;
+    color:var(--br);
+}
+
+.related-products{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+    padding-bottom:100px;
+}
+
+.products{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    padding:0 20px;
+}
+
+.related-products h1{
+    font-family:var(--font1);
+    text-align:center;
+    font-size:1.75rem;
+    color:var(--br);
+    padding-bottom:30px;
+}
+
+.products div{
+    background-color:rgba(69, 41, 15, 0.6);
+    border:4px solid var(--br);
+    padding:40px;
+    width:250px;
+}
+
+.products div img{
+    max-width:100%;
+    height:auto;
+}
+
 @media only screen and (min-width:450px){
     :is(#button-left, #button-right){
         height:50px;
@@ -207,13 +450,19 @@ main{
     #button-right{
         right:-20px;
     }
+
+    .line{
+        width:90%;
+    }
+
+    .article-info > div{
+        gap:70px;
+    }
 }
 
 @media only screen and (max-width:768px){
-    .the-article > div{
-        flex-direction:column;
-        margin:0 20px;
-        gap:0px;
+    .the-article{
+        height:100%;
     }
 
     #article-mainpic{
@@ -241,11 +490,55 @@ main{
         padding:40px;
     }
 
-    .article-content{
-
-    }
-
     .article-badges{
         grid-template-columns: repeat(1, 300px);
+    }
+}
+
+@media only screen and (min-width:768px){
+    .line{
+        width:60%;
+    }
+
+    .products{
+        flex-direction: row;
+    }
+
+    .products div{
+        width:225px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    main{
+        padding-top:150px;
+    }
+
+    .the-article > div{
+        flex-direction:column;
+        margin:0 20px;
+        gap:0px;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .article-info > div{
+        gap:150px;
+    }
+
+    .products div{
+        width:300px;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .line{
+        width:50%;
+    }
+}
+
+@media only screen and (min-width:1600px){
+    .line{
+        width:35%;
     }
 }
