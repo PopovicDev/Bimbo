@@ -143,12 +143,12 @@ returns.onclick = () => {
 
 function Show(element){
     if(element.dataset.state == 'off'){
-        element.querySelector('i').style.transform = 'rotate(-45deg)';
+        element.querySelector('i').style.transform = 'rotateZ(-45deg) translate(-7px, -7px)';
         element.querySelector('#faq-content').style.display = 'block';
         element.dataset.state = 'on';
     }
     else{
-        element.querySelector('i').style.transform = 'rotate(0deg)';
+        element.querySelector('i').style.transform = 'rotateZ(0deg)';
         element.querySelector('#faq-content').style.display = 'none';
         element.dataset.state = 'off';
     }

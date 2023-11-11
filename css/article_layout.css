@@ -44,12 +44,24 @@ main{
     gap:10px;
 }
 
-.article-sidepic img{
+.article-sidepic div{
     display:flex;
     width:138px;
-    padding:30px 10px;
+    padding:40px 10px;
     background-color:rgba(69, 41, 15, 0.6);
     border:4px solid var(--br);
+}
+
+#spic1{
+    transform:rotateZ(90deg);
+}
+
+#spic2{
+    transform:rotateZ(180deg);
+}
+
+#spic3{
+    transform:rotateZ(270deg);
 }
 
 .article-content{
@@ -108,7 +120,7 @@ main{
   
 #number-quantity {
     font-family:var(--font);
-    padding: 0.24rem;
+    padding: 0.20rem;
     border: 0;
     width: 50px;
     -moz-appearance: textfield;
@@ -140,6 +152,14 @@ main{
     border:3px solid var(--g);
     font-size:1.25rem;
     cursor:pointer;
+    transition:background-color 300ms, border 300ms, color 300ms, box-shadow 300ms;
+}
+
+.article-about button:hover{
+    background-color:var(--w);
+    border:3px solid var(--br);
+    color:var(--bg);
+    box-shadow:3px 3px 0px var(--br);
 }
 
 .article-badges{
@@ -278,6 +298,11 @@ main{
     display:none;
 }
 
+#details-p span{
+    color:var(--br);
+    font-weight:900;
+}
+
 .line{
     margin-left:auto;
     margin-right:auto;
@@ -330,6 +355,20 @@ main{
     width:40px;
     border:3px solid var(--br);
     border-radius:50%;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+#review1{
+    background-image:url('../images/client1.webp');
+}
+
+#review2{
+    background-image:url('../images/client2.webp');
+}
+
+#review3{
+    background-image:url('../images/client3.webp');
 }
 
 .customer-cred{
@@ -379,6 +418,7 @@ main{
     font-family:var(--font);
     font-size:0.95rem;
     color:var(--w);
+    animation:FadeIn 300ms linear;
 }
 
 .faq-q > div{
@@ -390,7 +430,8 @@ main{
 
 .faq-q > div h2{
     font-family:var(--font1);
-    font-size:1.15rem;
+    font-size:1rem;
+    max-width:50ch;
     color:var(--br);
 }
 
@@ -398,6 +439,7 @@ main{
     font-family:var(--font1);
     font-size:1.5rem;
     color:var(--br);
+    transition:transform 300ms;
 }
 
 .related-products{
@@ -435,6 +477,15 @@ main{
 .products div img{
     max-width:100%;
     height:auto;
+}
+
+@keyframes FadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
 @media only screen and (min-width:450px){
@@ -478,20 +529,34 @@ main{
         display:block;
     }
 
-    .article-sidepic img{
+    .article-sidepic div{
         padding:40px;
         flex-direction:column;
         margin-bottom:40px;
         gap:0px;
+        width:auto;
     }
 
-    .article-sidepic img{
-        width:auto;
-        padding:40px;
+    :is(#spic1, #spic3){
+        padding:40px 0px;
     }
 
     .article-badges{
         grid-template-columns: repeat(1, 300px);
+    }
+
+    .review{
+        margin:0px 20px;
+        font-size:0.85rem;
+    }
+
+    .article-info-content{
+        font-size:0.85rem;
+    }
+
+    .faq-q > div h2{
+        margin-right:60px;
+        padding-left:10px;
     }
 }
 
