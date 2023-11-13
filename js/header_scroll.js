@@ -8,17 +8,26 @@ let header_contact = document.getElementById('header-contact');
 let cart_number = document.getElementById('cart-item-num');
 let header_menu = document.getElementsByClassName('menu')[0];
 let page = window.location.pathname.split("/").pop();
-window.onload = function(){
-        input.value = 0;
-        if(page == "shop.html" || page == "cutting_boards.html" || page == "board1.html"){
-                cart_number.style.color = 'var(--br)'
+console.log(page);
+window.addEventListener('load', ()=>{
+        switch(page){
+                case "shop.html":
+                        header.style.backgroundColor = 'var(--g)';
+                        break;
+                case "cutting_boards.html":
+                        header.style.backgroundColor = 'var(--g)';
+                        break;
+                case "board1.html":
+                        header.style.backgroundColor = 'var(--g)';
+                        break;
         }
+        input.value = 0;
         if(window.innerWidth < 768){
                 header_menu.style.backgroundColor = 'var(--bg)';
         }
         info1.style.display = 'block';
         document.documentElement.style.setProperty('--vision1', "block");
-}
+})
 
 window.onscroll = function(){
 	if(window.pageYOffset > 50){
@@ -38,9 +47,15 @@ function GreenStyle(){
         header_about.style.color = 'var(--g)';
         header_contact.style.color = 'var(--g)';
         if(page == "shop.html" || page == "cutting_boards.html" || page == "board1.html"){
-                cart_number.style.color = 'var(--bg)';
+                header.style.backgroundColor = 'var(--g)';
+                header_logo.style.color = 'var(--w)';
+                burger_icon.style.color = 'var(--w)';
+                cart_icon.style.color = 'var(--w)';
+                header_shop.style.color = 'var(--w)';
+                header_about.style.color = 'var(--w)';
+                header_contact.style.color = 'var(--w)';
                 if(window.innerWidth < 768){
-                        header_menu.style.backgroundColor = 'var(--w)';
+                        header_menu.style.backgroundColor = 'var(--g)';
                 }
         }
 }
@@ -54,9 +69,15 @@ function WhiteStyle(){
         header_about.style.color = 'var(--w)';
         header_contact.style.color = 'var(--w)';
         if(page == "shop.html" || page == "cutting_boards.html" || page == "board1.html"){
-                cart_number.style.color = 'var(--br)';
+                header.style.backgroundColor = 'var(--g)';
+                header_logo.style.color = 'var(--w)';
+                burger_icon.style.color = 'var(--w)';
+                cart_icon.style.color = 'var(--w)';
+                header_shop.style.color = 'var(--w)';
+                header_about.style.color = 'var(--w)';
+                header_contact.style.color = 'var(--w)';
                 if(window.innerWidth < 768){
-                        header_menu.style.backgroundColor = 'var(--bg)';
+                        header_menu.style.backgroundColor = 'var(--g)';
                 }
         }
 }
