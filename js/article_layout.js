@@ -16,12 +16,12 @@ let gallery = [
     document.getElementById('pic3'),
     document.getElementById('pic4')
 ]
-let value = 0;
+let value = 1;
 let i = 0;
 
 decrease.onclick = () => {
-    if(value == 0){
-        value = 0;
+    if(value == 1){
+        value = 1;
         input.value = value;
     }
     else{

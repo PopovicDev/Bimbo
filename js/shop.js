@@ -1,79 +1,47 @@
-let decrease = document.getElementById('number-left');
-let increase = document.getElementById('number-right');
-let input = document.getElementById('number-quantity');
-let pic_left = document.getElementById('button-left');
-let pic_right = document.getElementById('button-right');
-let main_pic = document.getElementById('article-mainpic');
-let gallery = [
-    document.getElementById('pic1'),
-    document.getElementById('pic2'),
-    document.getElementById('pic3'),
-    document.getElementById('pic4')
-]
-let value = 0;
-let i = 0;
-
-decrease.onclick = () => {
-    if(value == 0){
-        value = 0;
-        input.value = value;
+function AddToCart(button){
+    let product = {
+        name: button.parentElement.getElementsByTagName('h1')[0].innerHTML,
+        price: button.parentElement.getElementsByTagName('h2')[0].innerHTML.split('€')[0],
+        quantity: input.value
     }
-    else{
-        value--;
-        input.value = value;
-    }
+    localStorage.setItem("product" + localStorage.length, JSON.stringify(product));
+    cart.innerHTML = ``;
+    LoadCart();
 }
 
-increase.onclick = () => {
-    value++;
-    input.value = value;
+function RemoveFromCart(item){
+    localStorage.removeItem(`${item}`);
+    LoadCart();
 }
 
-pic_right.onclick = () => {
-    i++;
-    if(i>3){
-        i=0;
-    }
-    Picture();
+function Total(total){
+    cart.innerHTML += `
+    <div class="cart-total">
+        <h1>Total: ${total}</h1>
+        <button id="my-cart">MY CART</button>
+    </div>
+    `;
 }
 
-pic_left.onclick = () => {
-    i--;
-    if(i<0){
-        i=3;
+function LoadCart(){
+    cart.innerHTML = '';
+    let total_price = 0;
+    if(localStorage.length >= 1){
+        for(let p = parseInt(localStorage.key(0).split("product")[1]); p < localStorage.length; p++){
+            cart.innerHTML += `
+            <div id="product">
+                <div class="product-info">
+                    <h3>${JSON.parse(localStorage.getItem("product"+p)).name}</h3>
+                    <h3>${parseInt(JSON.parse(localStorage.getItem("product"+p)).quantity) * parseInt(JSON.parse(localStorage.getItem("product"+p)).price)}$ (${JSON.parse(localStorage.getItem("product"+p)).quantity} * ${JSON.parse(localStorage.getItem("product"+p)).price})</h3>
+                </div>
+                <div class="product-interact">
+                    <h3 onclick="RemoveFromCart('${"product"+p}')">X</h3>
+                    <a href="../pages/${JSON.parse(localStorage.getItem("product"+p)).name.split(" ")[0].toLowerCase()}_board.html">See more</a>
+                </div>
+            </div>`;
+            total_price += parseInt(JSON.parse(localStorage.getItem("product"+p)).quantity) * parseInt(JSON.parse(localStorage.getItem("product"+p)).price);
+        }
     }
-    Picture();
-}
-
-function Picture(){
-    switch(i){
-        case 0:
-            gallery[0].style.display = 'block';
-            main_pic.style.display = 'flex';
-            gallery[1].style.display = 'none';
-            gallery[2].style.display = 'none';
-            gallery[3].style.display = 'none';
-            break;
-        case 1:
-            gallery[0].style.display = 'none';
-            main_pic.style.display = 'none';
-            gallery[1].style.display = 'block';
-            gallery[2].style.display = 'none';
-            gallery[3].style.display = 'none';
-            break;
-        case 2:
-            gallery[0].style.display = 'none';
-            main_pic.style.display = 'none';
-            gallery[1].style.display = 'none';
-            gallery[2].style.display = 'block';
-            gallery[3].style.display = 'none';
-            break;
-        case 3:
-            gallery[0].style.display = 'none';
-            main_pic.style.display = 'none';
-            gallery[1].style.display = 'none';
-            gallery[2].style.display = 'none';
-            gallery[3].style.display = 'block';
-            break;
-    }
+    cart_number.innerHTML = `${localStorage.length}`;
+    Total(total_price);
 }
