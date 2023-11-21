@@ -7,7 +7,6 @@ let header_about = document.getElementById('header-about');
 let header_contact = document.getElementById('header-contact');
 let cart_number = document.getElementById('cart-item-num');
 let header_menu = document.getElementsByClassName('menu')[0];
-let cart = document.getElementById('cart');
 let page = window.location.pathname.split("/").pop();
 let page_regex = /board/;
 
