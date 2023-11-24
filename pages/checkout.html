@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/ea3edf7906.js" crossorigin="anonymous"></script>
+    <title>Bimbo</title>
+    <link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" href="">
+    <link rel="stylesheet" href="../css/header&footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body onload="CheckOut()">
+    <header id="header">
+        <a href="../index.html" class="header-logo">Bimbo</a>
+        <nav>
+            <input type="checkbox" id="burger-check">
+            <label for="burger-check" class="burger-checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="../pages/shop.html" id="header-shop">SHOP</a></li>
+                <li><a href="" id="header-about">ABOUT</a></li>
+                <li><a href="" id="header-contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="cart-area">
+            <input type="checkbox" id="cart-check">
+            <label for="cart-check" class="cart-checkbtn" onclick="ShowCart(this)" data-state1="off">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </label>
+            <h3 id="cart-item-num">0</h3>
+            <div id="cart">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="checkout">
+            <div id="payment-info">
+                <div id="shipping-address">
+                    <div class="title">
+                        <h1>SHIPPING ADDRESS</h1>
+                    </div>
+                    <div class="inputs1">
+                        <div class="name">
+                            <h3>First Name *</h3>
+                            <input type="text" name="firstname" id="first-name">
+                        </div>
+                        <div class="surname">
+                            <h3>Last Name *</h3>
+                            <input type="text" name="lastname" id="last-name">
+                        </div>
+                    </div>
+                    <div class="inputs2">
+                        <div class="number">
+                            <h3>Phone Number *</h3>
+                            <input type="text" name="phonenumber" id="phone-number">
+                        </div>
+                        <div class="e-mail">
+                            <h3>E-Mail *</h3>
+                            <input type="text" name="email" id="e-mail">
+                        </div>
+                    </div>
+                    <div class="inputs3">
+                        <div class="address">
+                            <h3>Address *</h3>
+                            <input type="text" name="address" id="address">
+                        </div>
+                        <div class="home-number">
+                            <h3>Home Number *</h3>
+                            <input type="text" name="homenumber" id="home-number">
+                        </div>
+                    </div>
+                    <div class="inputs4">
+                        <div class="city">
+                            <h3>City *</h3>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div class="postal-code">
+                            <h3>Postal Code *</h3>
+                            <input type="text" name="postal" id="postal-code">
+                        </div>
+                    </div>
+                    <div class="confirm">
+                        <button id="save-info">Save and Deliver Here</button>
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="title">
+                        <h1>PAYMENT METHOD</h1>
+                    </div>
+                    <div class="methods">
+                        <button id="card">Credit Card</button>
+                        <button id="cash-on-delivery">Cash On Delivery</button>
+                    </div>
+                </div>
+            </div>
+            <div id="shopping-cart">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <img src="../images/logo.webp" alt="">
+            <div class="content">
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=250&amp;hl=en&amp;q=Bimbo&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://connectionsgame.org/">Connections NYT</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:250px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:250px;}.gmap_iframe {height:250px!important;}</style></div>
+                <div class="footer-info">
+                    <div class="footer-location">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="location-info">
+                            <h4>Serbia, Smederevo</h4>
+                            <h4>Street 34, Number 03</h4>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="contact">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>+381 65 921 57 25</h4>
+                            <h4>+026 721 591</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="footer-shop"><a href="../pages/shop.html">SHOP</a></button>
+            </div>
+        </div>
+        <h4>© All Rights Reserved to Bimbo</h4>
+    </footer>
+    <script src="../js/header_scroll.js"></script>
+    <script src="../js/shop.js"></script>
+    <script src="https://kit.fontawesome.com/ea3edf7906.js" crossorigin="anonymous"></script>
+</body>
+</html>
