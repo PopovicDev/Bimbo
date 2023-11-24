@@ -59,7 +59,11 @@ function LoadCart(){
     });
     let index = products.indexOf("shipping");
     if (index > -1) {
+        cart_number.innerHTML = `${localStorage.length - 1}`;
         products.splice(index, 1);
+    }
+    else{
+        cart_number.innerHTML = `${localStorage.length}`;
     }
     products.forEach((element)=>{
         cart.innerHTML += `
@@ -76,7 +80,6 @@ function LoadCart(){
             </div>`;
             total_price += parseInt(JSON.parse(localStorage.getItem(element)).quantity) * parseInt(JSON.parse(localStorage.getItem(element)).price);
     })
-    cart_number.innerHTML = `${localStorage.length - 1}`;
     Total(total_price);
 }
 

@@ -14,7 +14,18 @@ window.addEventListener('load', ()=>{
         if(page != "index.html"){
                 header.style.backgroundColor = 'var(--g)';
         }
-        cart_number.innerHTML = `${localStorage.length - 1}`;
+        let products = [];
+        Object.keys(localStorage).forEach((element)=>{
+                products.push(element);
+            });
+            let index = products.indexOf("shipping");
+            if (index > -1) {
+                cart_number.innerHTML = `${localStorage.length - 1}`;
+                products.splice(index, 1);
+            }
+            else{
+                cart_number.innerHTML = `${localStorage.length}`;
+            }
         input.value = 1;
         if(window.innerWidth < 768){
                 header_menu.style.backgroundColor = 'var(--bg)';
