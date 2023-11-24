@@ -33,21 +33,41 @@ function RemoveFromCart(item){
 }
 
 function Total(total){
-    cart.innerHTML += `
+    if(page != "index.html"){
+        cart.innerHTML += `
     <div class="cart-total">
         <h1>Total: ${total}€</h1>
         <a href="../pages/checkout.html"><button id="my-cart">CHECKOUT</button></a>
     </div>
     `;
+    }
+    else{
+        cart.innerHTML += `
+    <div class="cart-total">
+        <h1>Total: ${total}€</h1>
+        <a href="./pages/checkout.html"><button id="my-cart">CHECKOUT</button></a>
+    </div>
+    `;
+    }
 }
 
 function CheckOutTotal(total){
-    checkout.innerHTML += `
+    if(page != "index.html"){
+        checkout.innerHTML += `
     <div class="checkout-cart-total">
         <h1>Total: ${total}€</h1>
         <a href="../pages/checkout.html"><button id="checkout-my-cart">PROCEED</button></a>
     </div>
     `;
+    }
+    else{
+        checkout.innerHTML += `
+    <div class="checkout-cart-total">
+        <h1>Total: ${total}€</h1>
+        <a href="./pages/checkout.html"><button id="checkout-my-cart">PROCEED</button></a>
+    </div>
+    `;
+    }
 }
 
 function LoadCart(){
