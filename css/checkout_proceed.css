@@ -1,0 +1,14 @@
+main{
+    height:100dvh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--g);
+}
+
+h1{
+    font-family: var(--font1);
+    color:var(--w);
+}

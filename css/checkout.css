@@ -122,6 +122,7 @@ main{
 }
 
 #shipping-address input{
+    position:relative;
     outline:none;
     border:none;
     box-shadow:0px 0px 3px black;
@@ -139,6 +140,10 @@ main{
     display:flex;
     gap:20px;
     padding:5px;
+}
+
+#shipping-address > div h5{
+    color:red;
 }
 
 #shipping-address > div > div{
@@ -215,7 +220,7 @@ main{
     background-color:var(--lg);
     color:var(--w);
     transition:box-shadow 300ms;
-    width:230px;
+    width:250px;
 }
 
  @media only screen and (max-width: 600px) {
@@ -294,5 +299,11 @@ main{
  @media only screen and (max-width:1050px){
     .methods{
         flex-direction: column;
+    }
+ }
+
+ @media only screen and (max-width:1200px){
+    #checkout{
+        width:90%;
     }
  }
