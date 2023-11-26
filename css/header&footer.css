@@ -21,7 +21,7 @@ header{
 }
 
 .header-logo{
-   font-family:'Segoe Script', sans-serif;
+   font-family: 'Pacifico', cursive;
    text-decoration:none;
    color:var(--w);
    order:2;
