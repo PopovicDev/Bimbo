@@ -10,9 +10,10 @@
 	<link rel="apple-touch-icon" href="../images/logo.webp">
     <link rel="stylesheet" href="../css/header&footer.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/checkout_proceed.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/contact_page.css">
 </head>
-<body onload="Proceeded();">
+<body>
     <header id="header">
         <a href="../index.html" class="header-logo">Bimbo</a>
         <nav>
@@ -22,8 +23,8 @@
             </label>
             <ul class="menu">
                 <li><a href="../pages/shop.html" id="header-shop">SHOP</a></li>
-                <li><a href="../pages/about.html" id="header-about">ABOUT</a></li>
-                <li><a href="../pages/contact.html" id="header-contact">CONTACT</a></li>
+                <li><a href="./about.html" id="header-about">ABOUT</a></li>
+                <li><a href="./contact.html" id="header-contact">CONTACT</a></li>
             </ul>
         </nav>
         <div class="cart-area">
@@ -37,7 +38,38 @@
         </div>
     </header>
     <main>
-        <h1 class="hidden1"></h1>
+        <div class="contact-form hidden">
+            <h2>Get in Touch</h2>
+            <div class="contact-form-info">
+                <div class="footer-info">
+                    <div class="footer-location">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="location-info">
+                            <h4>United States, Washington</h4>
+                            <h4>Street 34, Number 03</h4>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="contact">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>(555) 123-4567</h4>
+                            <h4>(888) 910-1112</h4>
+                        </div>
+                    </div>
+                </div>
+                <form id="emailForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" placeholder="Phone Number" required>
+                    <textarea id="message" rows="6" placeholder="How can we help you?" required></textarea>
+                    <button type="submit" id="form-button">SEND</button>
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -64,13 +96,15 @@
                         </div>
                     </div>
                 </div>
-                <button class="footer-shop"><a href="../pages/shop.html">SHOP</a></button>
+                <button class="footer-shop"><a href="./pages/shop.html">SHOP</a></button>
             </div>
         </div>
         <h4>© All Rights Reserved to Bimbo</h4>
     </footer>
+    <script src="../js/contact.js"></script>
     <script src="../js/observer.js"></script>
     <script src="../js/header_scroll.js"></script>
+    <script src="../js/services.js"></script>
     <script src="../js/shop.js"></script>
     <script src="https://kit.fontawesome.com/ea3edf7906.js" crossorigin="anonymous"></script>
 </body>

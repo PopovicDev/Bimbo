@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bimbo</title>
+    <link rel="shortcut icon" href="../images/logo.webp">
+	<link rel="apple-touch-icon" href="../images/logo.webp">
+    <link rel="stylesheet" href="../css/header&footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/about_page.css">
+</head>
+<body>
+    <header id="header">
+        <a href="../index.html" class="header-logo">Bimbo</a>
+        <nav>
+            <input type="checkbox" id="burger-check">
+            <label for="burger-check" class="burger-checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="../pages/shop.html" id="header-shop">SHOP</a></li>
+                <li><a href="./about.html" id="header-about">ABOUT</a></li>
+                <li><a href="./contact.html" id="header-contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="cart-area">
+            <input type="checkbox" id="cart-check">
+            <label for="cart-check" class="cart-checkbtn" onclick="ShowCart(this)" data-state1="off">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </label>
+            <h3 id="cart-item-num">0</h3>
+            <div id="cart">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="about hidden">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Company Overview</h2>
+            <p>Bimbo Carpentry had modest beginnings that swiftly blossomed into a testament to artistry and unwavering dedication. The brainchild of lifelong friends, Brian and Michael, who were bound by a shared passion for woodworking and a vision to craft unique, handcrafted furniture and carpentry solutions. Starting with nothing more than a compact workshop and a handful of hand tools, they embarked on their journey by undertaking small projects, infusing each creation with their heartfelt dedication. The company's trajectory began to ascend as word spread about their exceptional carpentry skills and meticulous attention to detail, solidifying Bimbo's reputation for transforming ordinary wood into extraordinary creations.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Craftsmanship and Expertise</h2>
+            <p>Bimbo Carpentry takes pride in its skilled craftsmen who bring unparalleled expertise to every project. Brian and Michael's commitment to their craft is mirrored by the entire team, showcasing a wealth of experience, qualifications, and an unwavering dedication to delivering superior-quality wooden products. The carpenters at Bimbo bring not only technical skill but also a passion for woodworking, ensuring that each piece bears the mark of true craftsmanship.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Unique Selling Proposition</h2>
+            <p>What sets Bimbo apart in the world of carpentry is its unique approach to woodworking. A commitment to sustainability, innovative designs, and personalized customer service defines the company's essence. Bimbo Carpentry goes beyond crafting furniture; it creates bespoke solutions that resonate with individual tastes and preferences. The company's USP lies in its ability to turn visions into tangible, beautifully crafted wooden masterpieces.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Commitment to Quality</h2>
+            <p>At the heart of Bimbo Carpentry is an unwavering commitment to quality. From the selection of premium materials to stringent quality control measures, each step in the production process reflects the company's dedication to excellence. Bimbo ensures that every piece leaving its workshop not only meets but exceeds the highest standards, providing clients with lasting and impeccable wooden creations.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Customization and Design</h2>
+            <p>Bimbo Carpentry thrives on the ability to turn dreams into reality through customization and innovative design. Whether it's crafting unique furniture pieces or custom installations, the company's portfolio showcases a diverse range of projects tailored to meet the specific needs and desires of clients. Bimbo's design prowess transforms ideas into functional, aesthetic wooden wonders.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Sustainability Practices</h2>
+            <p>Bimbo Carpentry embraces sustainability as a core principle. The company is committed to eco-friendly practices, utilizing responsibly sourced wood and implementing environmentally conscious methods in its carpentry processes. Through these efforts, Bimbo not only crafts beautiful pieces but also contributes to the preservation of the environment.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Client Testimonials</h2>
+            <p>The satisfaction of Bimbo Carpentry's clients speaks volumes about the company's dedication to customer happiness. Positive testimonials, accompanied by images of completed projects, serve as a testament to the exceptional quality and personalized service provided by Bimbo. The trust and satisfaction of clients form the cornerstone of the company's success.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Community Involvement</h2>
+            <p>Beyond the workshop, Bimbo Carpentry is an active participant in the community. The company takes pride in supporting local causes and engaging in community initiatives. This commitment to giving back reflects Bimbo's belief in the importance of fostering positive relationships not only with clients but also within the broader community.</p>
+        </div>
+        <div class="about">
+            <img src="../images/logo.webp" alt="" width="150" height="150">
+            <h2>Contact Information</h2>
+            <p>For those inspired by Bimbo Carpentry's story and eager to explore the possibilities of bespoke wooden creations, reaching out is simple. Contact Bimbo via phone, email, or visit the physical locations if applicable. The team is ready to turn ideas into reality, crafting unique wooden solutions that reflect the artistry and dedication that define the essence of Bimbo Carpentry.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <img src="../images/logo.webp" alt="">
+            <div class="content">
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=250&amp;hl=en&amp;q=Washington&amp;t=&amp;z=6&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://connectionsgame.org/">Connections NYT</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:250px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:250px;}.gmap_iframe {height:250px!important;}</style></div>
+                <div class="footer-info">
+                    <div class="footer-location">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="location-info">
+                            <h4>United States, Washington</h4>
+                            <h4>Street 34, Number 03</h4>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="contact">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>(555) 123-4567</h4>
+                            <h4>(888) 910-1112</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="footer-shop"><a href="./pages/shop.html">SHOP</a></button>
+            </div>
+        </div>
+        <h4>© All Rights Reserved to Bimbo</h4>
+    </footer>
+    <script src="../js/observer.js"></script>
+    <script src="../js/header_scroll.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/shop.js"></script>
+    <script src="https://kit.fontawesome.com/ea3edf7906.js" crossorigin="anonymous"></script>
+</body>
+</html>

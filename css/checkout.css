@@ -25,6 +25,7 @@ main{
     background-color:var(--dg);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    max-height:800px;
 }
 
 #payment-info{
@@ -38,16 +39,44 @@ main{
     border-bottom-left-radius: 20px;
 }
 
+#checkout-products{
+    max-height:500px;
+    overflow:scroll;
+}
+
+#checkout-products::-webkit-scrollbar{
+    display:none;
+}
+
 #checkout-product{
     display:flex;
-    width:auto;
-    margin-bottom:10px;
-    height:130px;
-    padding:5px;
+    flex-direction: column;
     border:3px solid var(--br);
+    margin-bottom:10px;
+    background-color:var(--bg);
     font-family:var(--font1);
     color:var(--w);
-    background-color:var(--bg);
+    padding:5px;
+}
+
+#checkout-div{
+    display:flex;
+    width:auto;
+    height:150px;
+}
+
+#checkout-ddl h3{
+    color:var(--br);
+}
+
+#checkout-ddl select{
+    border:2px solid var(--dg);
+    padding:5px;
+    color:var(--br);
+    font-family:var(--font1);
+    outline:none;
+    font-size:0.75rem;
+    cursor:pointer;
 }
 
 .checkout-product-info{
@@ -223,6 +252,100 @@ main{
     width:250px;
 }
 
+#cr-pay{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:1000;
+}
+
+#credit-payment{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    height:auto;
+    font-family:var(--font);
+    position:relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size:1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform:rotateZ(45deg);
+}
+
+.disable-cursor {
+    cursor: auto;
+}
+
+#credit-payment h2 {
+    text-align: center;
+    color: var(--dg);
+    margin-bottom:30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#credit-payment form {
+    display: flex;
+    flex-direction: column;
+}
+
+#credit-payment label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+#credit-payment input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width:100%;
+    outline:none;
+    border:1px solid black;
+}
+
+.expiry-cvv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.expiry-cvv div{
+    display:flex;
+    flex-direction: column;
+}
+
+#credit-payment button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#credit-payment button:hover {
+    background-color: #45a049;
+}
+
  @media only screen and (max-width: 600px) {
     .title{
         text-align: center;
@@ -273,8 +396,8 @@ main{
         flex-direction: column;
     }
 
-    #checkout-product{
-        flex-direction:column;
+    #checkout-div{
+        flex-direction: column;
         height:auto;
         gap:10px;
     }

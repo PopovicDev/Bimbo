@@ -18,7 +18,7 @@ window.addEventListener('load', ()=>{
         Object.keys(localStorage).forEach((element)=>{
                 products.push(element);
             });
-            let index = products.indexOf("shipping");
+            let index = products.indexOf("recipient_id");
             if (index > -1) {
                 cart_number.innerHTML = `${localStorage.length - 1}`;
                 products.splice(index, 1);
@@ -26,11 +26,9 @@ window.addEventListener('load', ()=>{
             else{
                 cart_number.innerHTML = `${localStorage.length}`;
             }
-        input.value = 1;
         if(window.innerWidth < 768){
                 header_menu.style.backgroundColor = 'var(--bg)';
         }
-        info1.style.display = 'block';
         document.documentElement.style.setProperty('--vision1', "block");
 })
 

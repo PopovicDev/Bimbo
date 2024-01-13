@@ -314,15 +314,15 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
 }
 
 #fifth-page-pic{
-    border-radius:5px;
-    box-shadow:0px 5px 20px black;
+    max-width:100%;
+    height:auto;
     z-index:100;
 }
 
 #button-left{
     display:block;
     position:absolute;
-    top:calc(50% + 50px);
+    top:calc(50% + 60px);
     left:0px;
     height:50px;
     width:50px;
@@ -341,7 +341,7 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
 #button-right{
     display:block;
     position:absolute;
-    top:calc(50% + 50px);
+    top:calc(50% + 60px);
     right:0px;
     height:50px;
     width:50px;
@@ -350,6 +350,14 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
     border-radius:50%;
     z-index:101;
     cursor:pointer;
+}
+
+#button-left:active,#button-right:active{
+    box-shadow:0px 0px 20px var(--dg);
+}
+
+#button-left:hover,#button-right:hover{
+    transform:unset;
 }
 
 #button-right i{
@@ -361,6 +369,24 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:20px;
+    row-gap:70px;
+}
+
+#all-pics img{
+    max-width:100%;
+    height:auto;
+}
+
+@media only screen and (max-width:400px){
+    :is(#button-left, #button-right){
+        top:calc(50% + 45px);
+    }
+}
+
+@media only screen and (min-width:400px) and (max-width:600px){
+    :is(#button-left, #button-right){
+        top:calc(50% + 35px);
+    }
 }
 
 @media only screen and (min-width: 450px){
@@ -374,6 +400,10 @@ background: linear-gradient(180deg, rgba(56,116,110,1) 0%, rgba(5,64,58,1) 55%, 
 }
 
 @media only screen and (min-width: 600px){
+    :is(#button-left, #button-right){
+        top:calc(50% + 65px);
+    }
+
     #button-left{
         left:100px;
     }

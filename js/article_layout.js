@@ -1,8 +1,6 @@
 let decrease = document.getElementById('number-left');
 let increase = document.getElementById('number-right');
 let input = document.getElementById('number-quantity');
-let pic_left = document.getElementById('button-left');
-let pic_right = document.getElementById('button-right');
 let main_pic = document.getElementById('article-mainpic');
 let details = document.getElementById('details');
 let shipping = document.getElementById('shipping');
@@ -10,6 +8,7 @@ let returns = document.getElementById('returns');
 let info1 = document.getElementById('details-p');
 let info2 = document.getElementById('shipping-p');
 let info3 = document.getElementById('returns-p');
+
 let gallery = [
     document.getElementById('pic1'),
     document.getElementById('pic2'),
@@ -33,22 +32,6 @@ decrease.onclick = () => {
 increase.onclick = () => {
     value++;
     input.value = value;
-}
-
-pic_right.onclick = () => {
-    i++;
-    if(i>3){
-        i=0;
-    }
-    Picture();
-}
-
-pic_left.onclick = () => {
-    i--;
-    if(i<0){
-        i=3;
-    }
-    Picture();
 }
 
 function Picture(){

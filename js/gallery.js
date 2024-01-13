@@ -6,12 +6,12 @@ let fifth_page = document.getElementsByClassName('fifth-page')[0];
 
 let i = 0;
 let pictures = [
-    "./images/random1.webp",
-    "./images/random2.webp",
-    "./images/random3.webp",
-    "./images/random4.webp",
-    "./images/random5.webp",
-    "./images/random6.webp",
+    "./images/walnut_board.webp",
+    "./images/acacia_board.webp",
+    "./images/maple_board.webp",
+    "./images/bamboo_board.webp",
+    "./images/teak_board.webp",
+    "./images/mahogany_board.webp",
 ]
 
 picture.src = pictures[0];
