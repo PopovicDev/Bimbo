@@ -193,6 +193,9 @@ async function LoadShippingAddress(){
         fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/get-recid',{
             method:'POST',
             headers:{
+                'Access-Control-Allow-Headers' : 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({ recid: localStorage.getItem("recipient_id") })
@@ -225,6 +228,9 @@ async function LoadShippingAddress(){
         fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_file_post',{
             method:'POST',
             headers:{
+                'Access-Control-Allow-Headers' : 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({ recipient_id: localStorage.getItem("recipient_id") })
@@ -262,6 +268,9 @@ if(path == 'checkout.html'){
             fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_post',{
                 method:'POST',
                 headers:{
+                    'Access-Control-Allow-Headers' : 'Content-Type',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                     'Content-Type': 'application/json'
                 },
                 body:JSON.stringify({
@@ -299,6 +308,9 @@ if(path == 'checkout.html'){
         fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_cancel_post',{
             method:'POST',
             headers:{
+                'Access-Control-Allow-Headers' : 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({recipientid:localStorage.getItem("recipient_id")})
@@ -516,6 +528,9 @@ function ProceedCheck(){
         fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/payment_method', {
             method: 'POST',
             headers:{
+                'Access-Control-Allow-Headers' : 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({paymentmethod:payment_method, recipient_id:localStorage.getItem("recipient_id")})
@@ -556,6 +571,9 @@ function Proceeded(){
             fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/delivery_id_post',{
                 method:'POST',
                 headers:{
+                    'Access-Control-Allow-Headers' : 'Content-Type',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                     'Content-Type': 'application/json'
                 },
                 body:JSON.stringify({
@@ -594,6 +612,9 @@ function Proceeded(){
         fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/delivery_id_file_post',{
             method:'POST',
             headers:{
+                'Access-Control-Allow-Headers' : 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({delivery_id:del_id})
