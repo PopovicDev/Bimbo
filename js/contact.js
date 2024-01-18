@@ -13,7 +13,7 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
         message: message
     };
 
-    fetch('https://cors-anywhere.herokuapp.com/https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/send-email', {
+    fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/send-email', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
