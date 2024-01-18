@@ -14,11 +14,9 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
     };
 
     fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/send-email', {
+        mode: 'no-cors',
         method: 'POST',
         headers: {
-            'Access-Control-Allow-Headers' : 'Content-Type',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,PATCH',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
