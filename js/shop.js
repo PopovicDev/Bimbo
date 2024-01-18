@@ -17,8 +17,8 @@ let cr_expiry = document.getElementById('expiry');
 let cr_cvv = document.getElementById('cvv');
 let ar1 = [];
 let ar2 = [];
-fetch('https://bimbocompany.azurewebsites.net/api/recipient_id_get').then(response=>response.json()).then(data=>rec_id = data);
-fetch('https://bimbocompany.azurewebsites.net/api/delivery_id_get').then(response=>response.json()).then(data=>del_id = data);
+fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_get').then(response=>response.json()).then(data=>rec_id = data);
+fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/delivery_id_get').then(response=>response.json()).then(data=>del_id = data);
 let path = window.location.pathname.split("/").pop();
 
 let inputs = [
@@ -190,7 +190,7 @@ async function LoadShippingAddress(){
     })
     let inputz;
     if(localStorage.getItem("recipient_id") !== null){
-        fetch('https://bimbocompany.azurewebsites.net/api/get-recid',{
+        fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/get-recid',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -209,7 +209,7 @@ async function LoadShippingAddress(){
         .catch(error =>{
             console.error('Error during fetch:', error);
         });
-        await fetch('https://bimbocompany.azurewebsites.net/api/db-fill-SA').then(response=>response.json()).then(data=>inputz = data);
+        await fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/db-fill-SA').then(response=>response.json()).then(data=>inputz = data);
         inputs.forEach((element)=>{
             if(inputz[0][`${element.name}`] == undefined){
                 element.value = "";
@@ -222,7 +222,7 @@ async function LoadShippingAddress(){
     }
     else{
         localStorage.setItem("recipient_id", rec_id);
-        fetch('https://bimbocompany.azurewebsites.net/api/recipient_id_file_post',{
+        fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_file_post',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -259,7 +259,7 @@ if(path == 'checkout.html'){
             }
         })
         if(b == false){
-            fetch('https://bimbocompany.azurewebsites.net/api/recipient_id_post',{
+            fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_post',{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json'
@@ -296,7 +296,7 @@ if(path == 'checkout.html'){
     }
     
     cancel_info.onclick = () => {
-        fetch('https://bimbocompany.azurewebsites.net/api/recipient_id_cancel_post',{
+        fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/recipient_id_cancel_post',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -513,7 +513,7 @@ function ProceedCheck(){
         else{
             payment_method = "Cash on Delivery";
         }
-        fetch('https://bimbocompany.azurewebsites.net/api/payment_method', {
+        fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/payment_method', {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -553,7 +553,7 @@ function Proceeded(){
     }
     else{
         items.forEach(element=>{
-            fetch('https://bimbocompany.azurewebsites.net/api/delivery_id_post',{
+            fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/delivery_id_post',{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json'
@@ -591,7 +591,7 @@ function Proceeded(){
         products.forEach((element)=>{
             localStorage.removeItem(`${element}`);
         });
-        fetch('https://bimbocompany.azurewebsites.net/api/delivery_id_file_post',{
+        fetch('https://bimbo-company-3e6f6ed5b564.herokuapp.com/api/delivery_id_file_post',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
